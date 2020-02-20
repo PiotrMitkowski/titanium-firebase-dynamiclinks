@@ -64,7 +64,7 @@ Register your module with your application by editing `tiapp.xml` and adding you
 Example:
 
 <modules>
-  <module version="1.0.0">com.pmitkowski.firebase.dynamiclinks</module>
+  <module version="1.0.0" platform="android">com.pmitkowski.firebase.dynamiclinks</module>
 </modules>
 
 When you run your project, the compiler will combine your module along with its dependencies
@@ -72,36 +72,13 @@ and assets into the application.
 
 ## Example Usage
 
-To use your module in code, you will need to require it.
-
-### ES6+ (recommended)
-
 ```js
-import MyModule from 'com.pmitkowski.firebase.dynamiclinks';
-MyModule.foo();
+var Firebase = require('com.pmitkowski.firebase.dynamiclinks');
+Firebase.addEventListener('deeplink:new', (params) => {
+  // handle received link
+});
+Firebase.addEventListener('deeplink:error', (error) => {
+    console.error(error);
+});
+Firebase.handleDeepLink();
 ```
-
-### ES5
-
-```js
-var MyModule = require('com.pmitkowski.firebase.dynamiclinks');
-MyModule.foo();
-```
-
-## Testing
-
-To test your module with the example, use:
-
-```js
-appc run -p [ios|android]
-```
-
-This will execute the app.js in the example/ folder as a Titanium application.
-
-## Distribution
-
-You have a variety of choises for distributing your module
-- [Gitt.io](http://gitt.io/)
-- [Axway Marketplace](https://marketplace.axway.com/home)
-
-Code strong!

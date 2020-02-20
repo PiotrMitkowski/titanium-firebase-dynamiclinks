@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 4
+architectures: arm64-v8a armeabi-v7a x86
+description: DynamicLinks
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2020 by Your Company
+
+# these should not be edited
+name: DynamicLinks
+moduleid: com.pmitkowski.firebase.dynamiclinks
+guid: 241bacd3-4520-4ba4-a66b-c43c9fdb3fe4
+platform: android
+minsdk: 8.3.1.GA

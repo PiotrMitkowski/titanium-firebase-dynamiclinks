@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="android/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Library/Android/sdk/platforms/android-28/android.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Library/Application Support/Titanium/mobilesdk/osx/8.3.1.GA/android/titanium.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Library/Application Support/Titanium/mobilesdk/osx/8.3.1.GA/android/kroll-common.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Library/Application Support/Titanium/mobilesdk/osx/8.3.1.GA/android/kroll-apt.jar"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Documents/Projekty/Appcelerator/dynamic-links2/android/lib/collection-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Documents/Projekty/Appcelerator/dynamic-links2/android/lib/annotation-1.1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Documents/Projekty/Appcelerator/dynamic-links2/android/build/intermediates/exploded-aar/play-services-tasks-16.0.1/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Documents/Projekty/Appcelerator/dynamic-links2/android/build/intermediates/exploded-aar/firebase-dynamic-links-17.0.0/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/piotrmitkowski/Documents/Projekty/Appcelerator/dynamic-links2/android/build/intermediates/exploded-aar/firebase-measurement-connector-17.0.1/classes.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

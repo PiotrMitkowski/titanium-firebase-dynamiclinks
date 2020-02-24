@@ -13,14 +13,12 @@ import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
 
 import org.appcelerator.titanium.TiApplication;
-
+import org.appcelerator.kroll.common.Log;
+import org.appcelerator.kroll.common.TiConfig;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import androidx.annotation.NonNull;
-
-import org.appcelerator.kroll.common.Log;
-import org.appcelerator.kroll.common.TiConfig;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,26 +29,32 @@ import com.google.firebase.dynamiclinks.DynamicLink;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
 
-@Kroll.module(name="FirebaseDeepLinking", id="com.pmitkowski.firebase.dynamiclinks")
-public class FirebaseDeepLinkingModule extends KrollModule
+@Kroll.module(name="DynamicLinks2", id="com.pmitkowski.firebase.dynamiclinks")
+public class DynamicLinks2Module extends KrollModule
 {
 
 	// Standard Debugging variables
-	private static final String LCAT = "FirebaseDeepLinkingModule";
-	private static FirebaseDeepLinkingModule instance = null;
+	private static final String LCAT = "DynamicLinks2Module";
 
-	public FirebaseDeepLinkingModule() {
+	// You can define constants with @Kroll.constant, for example:
+	// @Kroll.constant public static final String EXTERNAL_NAME = value;
+
+	public DynamicLinks2Module()
+	{
 		super();
-		instance = this;
 	}
 
 	@Kroll.onAppCreate
-	public static void onAppCreate(TiApplication app) {
+	public static void onAppCreate(TiApplication app)
+	{
+		Log.d(LCAT, "inside onAppCreate");
 		// put module init code that needs to run when the application is created
 	}
 
+	// Methods
 	@Kroll.method
-	public void handleDeepLink() {
+	public void handleDeepLink()
+	{
 		Activity currentActivity = TiApplication.getAppRootOrCurrentActivity();
 		Intent intent = currentActivity.getIntent();
 		if (intent == null) {
@@ -83,5 +87,6 @@ public class FirebaseDeepLinkingModule extends KrollModule
             }
         });	
 	}
+
 }
 

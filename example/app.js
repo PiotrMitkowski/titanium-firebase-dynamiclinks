@@ -13,16 +13,16 @@ win.add(label);
 win.open();
 
 // TODO: write your module tests here
-var dynamiclinks = require('com.pmitkowski.firebase.dynamiclinks');
-Ti.API.info("module is => " + dynamiclinks);
+var dynamic_links2 = require('com.pmitkowski.firebase.dynamiclinks');
+Ti.API.info("module is => " + dynamic_links2);
 
-label.text = dynamiclinks.example();
+label.text = dynamic_links2.example();
 
-Ti.API.info("module exampleProp is => " + dynamiclinks.exampleProp);
-dynamiclinks.exampleProp = "This is a test value";
+Ti.API.info("module exampleProp is => " + dynamic_links2.exampleProp);
+dynamic_links2.exampleProp = "This is a test value";
 
 if (Ti.Platform.name == "android") {
-	var proxy = dynamiclinks.createExample({
+	var proxy = dynamic_links2.createExample({
 		message: "Creating an example Proxy",
 		backgroundColor: "red",
 		width: 100,
